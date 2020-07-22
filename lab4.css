@@ -1,0 +1,61 @@
+p span  {
+    width: 100px;
+    display: inline-block;
+}
+.main {
+    position: relative;
+}
+.card{
+    margin : 10px auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 300px;
+    padding: 10px;
+}
+body { 
+    width: 1140px; 
+    height: 100%;
+    margin:auto; 
+    border:1px solid darkgrey
+}
+
+header { 
+    padding: 20px;
+    background:wheat; height: 100px; position: relative;
+    text-align: center;
+}
+    
+
+main{ 
+    width: 100%;
+    display: flex;
+}
+footer { 
+    text-align: center;
+    background: rgb(63, 199, 199);
+    height: 100px;}
+
+.myfooter {
+    
+    display: inline-block;
+    margin : 10px auto;
+}
+.col-left {
+    background-color: whitesmoke;
+    float: left;
+    width: 40%;
+    box-sizing: border-box;
+    height: 600px;
+}
+.col-right{
+    background: white;
+    float: left;
+    width: 60%;
+}
+#clock {
+    color: blueviolet;
+    font-size: 1rem;
+    font-weight: bold; 
+    text-align: center;
+
+}
