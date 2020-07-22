@@ -38,30 +38,29 @@
 
         </div>
         <div class="col-right">
-            <div class="card">
-                <h2>Bài 2</h2>
-                <p><b> JAVASCRIPT CÓ THỂ LÀM GÌ? </b></p>
+            <div class="container">   
+                <div class="card">
+                    <h2>Thông tin sinh viên</h2>
+                   <p><span>Tên:</span><b id="name"></b></p>
+                   <p><span>Điểm:</span><b id="point"></b></p>
+                   <p><span>Kết quả:</span><b id="exam3Result"></b></p>
+                   <button onclick="student.getInfo()">Nhập thông tin</button>
+               </div>         
             </div>
-    
-            <div class="card">
-                <h2>Trả lời</h2>
-                <p>JavaScript được tạo ra với mục đích xử lý các tác vụ phía Client như
-
-                Tạo menu xổ xuống. Các item menu khi đưa chuột vào sẽ xổ xuống các mục con của nó.
-                Thay đổi nội dung trang web. Ví dụ: hiện kết quả khen/chê tùy user trả lời câu hỏi đúng dau, hiện lời chào tùy thời gian buổi sáng hay chiều…
-                Thêm các thành phần động vào trang web như slide show, carousel.
-                Tạo các hiệu ứng cho hình ảnh, text…trong trang. Ví dụ các hiệu ứng ẩn hiện hình, đổi hình khi đưa chuột vào.
-                JavaScript có thể dùng viết game
-                Kiểm tra tình hợp lệ cửa dữ liệu người dùng (trong form). Ví dụ form đăng ký của facebook
-            </p>
-                
-    
-            </div>
+            
         </div>
-        
-
-        <div class="card-right">
-
+        <div class="col-left">
+            <div class="card">
+                <h2>Bài 4</h2>
+                <div class="grid-container">
+                    <button class="col1" onclick="myWindown.openWindown()">Mở trang thông tin</button>
+                    <button class="col2" onclick="myWindown.print()">In thông tin</button>
+                    <button class="col3" onclick="myWindown.autoMove()">Di Chuyển cửa sổ thông tin 1 tí</button>
+                    <button class="col4" onclick="myWindown.moveTo()">Di chuyển tới điểm</button>
+                    <button class="col5" onclick="myWindown.closeWindown()">Đóng cửa sổ</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         
