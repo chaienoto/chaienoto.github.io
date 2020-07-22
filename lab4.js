@@ -118,6 +118,14 @@ myWindown.moveTo = function(){
    
 }
 
+// example 5
+
+function fover(){
+    document.getElementById("img").src = "./img/img2.jpg";
+}
+function fout(){
+    document.getElementById("img").src = "./img/img1.jpg";
+}
 
 
 
