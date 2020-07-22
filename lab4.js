@@ -93,7 +93,7 @@ student.showInfo = function () {
 //example4
 var myWindown = {}
 myWindown.openWindown = function(){
-    this.w = window.open("lab4_info.html", "Thông Tin Sinh Viên Thực hiện", "width = 400, height = 200, top = 50,  left = 60")
+    this.w = window.open("lab4_info.html", "Thông Tin Sinh Viên Thực hiện", "width = 800, height = 800, top = 50,  left = 60")
     this.w.focus()
 }
 myWindown.closeWindown = function(){
