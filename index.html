@@ -6,82 +6,139 @@
     <script src="./lab4.js"></script>
     <link rel="stylesheet" href="./lab4.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tô Xuân Cường PS07744 - lab 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <title>Tô Xuân Cường PS07744</title>
 </head>
 
 <body>
-    <header>
-        <h1>Bài tập làm bởi Tô Xuân Cường</h1>
-        <div id="clock" onclick="clockWork()"></div>
-        <script>startClock()</script>
-    </header>
-
-    <main>
-        <div class="col-left">
-            <div>  
-                <div class="card">
-                    <h2>Bài 1 - Giải phương trình bậc 2</h2>
-                    <p>ax<sup>2</sup> + bx + c = 0</p>
-                    <form id="myForm">
-                        a: <input type="number" id="a" ><br><br>
-                        b: <input type="number" id="b" ><br><br>
-                        c: <input type="number" id="c" ><br><br>
-                        <input type="button" onclick="startExample1()" value="Tính">
-                    </form>
-                    <p id="result">Kết quả: </p>
-                    <p id="x1"> </p>
-                    <p id="x2"> </p>
-        
-                </div>
+    <div class="sticky-top py-1 myHeader" w3-include-html="./header.html"></div>
+    <div class="container-sm">
+        <div class="card">
+            <div class="card-header">
+                Bài 1 - Giải phương trình bậc 2
             </div>
-        
+            <div class="card-body" style="color: white">
+                <div class="container asm-exam-1">
+                    <div class="row" style="text-align: center; font-weight: bold">
+                        <div class="col-sm" style="border-right: 1px dotted white;">
+                            <p>Giải phương trình bậc 2</p>
+                            <p>ax<sup>2</sup> + bx + c = 0</p>
+                            <p id="timeCount">Số lần giải: 0</p>
+                            <div id="clock" style="font-style: italic;"></div>
+                        </div>
+                        <div class="col-sm">
+                            <form id="myForm">
+                                a: <input type="number" id="a"><br><br> b: <input type="number" id="b"> <br><br> c: <input type="number" id="c"><br><br>
+                                <input type="button" onclick="startExample1()" value="Giải PT">
+                                <input type="button" onclick="randomInput()" value="Cho số">
+                            </form>
+                        </div>
+                        <div class="col-sm">
+                            <div class="asm-exam-1-result">
+                                <p id="result">Kết quả: </p>
+                                <p id="x1"> </p>
+                                <p id="x2"> </p>
+                            </div>
 
-        </div>
-        <div class="col-right">
-            <div class="container">   
-                <div class="card">
-                    <h2>Thông tin sinh viên</h2>
-                   <p><span>Tên:</span><b id="name"></b></p>
-                   <p><span>Điểm:</span><b id="point"></b></p>
-                   <p><span>Kết quả:</span><b id="exam3Result"></b></p>
-                   <button onclick="student.getInfo()">Nhập thông tin</button>
-               </div>         
-            </div>
-
-            <div class="card">
-                <h2>Bài 5</h2>
-                <div >
-                    <img id="img" src="./img/img1.jpg" alt="" onmouseover="fover()" onmouseout="fout()">
-                </div>
-            </div>
-            
-        </div>
-        <div class="col-left">
-            <div class="card">
-                <h2>Bài 4</h2>
-                <div class="grid-container">
-                    <button class="col1" onclick="myWindown.openWindown()">Mở trang thông tin</button>
-                    <button class="col2" onclick="myWindown.print()">In thông tin</button>
-                    <button class="col3" onclick="myWindown.autoMove()">Di Chuyển cửa sổ thông tin 1 tí</button>
-                    <button class="col4" onclick="myWindown.moveTo()">Di chuyển tới điểm</button>
-                    <button class="col5" onclick="myWindown.closeWindown()">Đóng cửa sổ</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        
-    </main>
+
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Bài 2 - Bộ sưu tập ảnh
+            </div>
+            <div class="card-body">
+                <div class="container">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/wallpaper00.jpg" class="d-block w-100 carouselImg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/wallpaper01.jpg" class="d-block w-100 carouselImg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/wallpaper02.jpg" class="d-block w-100 carouselImg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/wallpaper03.jpg" class="d-block w-100 carouselImg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/wallpaper04.jpg" class="d-block w-100 carouselImg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/wallpaper05.jpg" class="d-block w-100 carouselImg" alt="...">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="card">
+            div.c
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="card">
+            <h2>Thông tin sinh viên</h2>
+            <p><span>Tên:</span><b id="name"></b></p>
+            <p><span>Điểm:</span><b id="point"></b></p>
+            <p><span>Kết quả:</span><b id="exam3Result"></b></p>
+            <button onclick="student.getInfo()">Nhập thông tin</button>
+        </div>
+    </div>
+
+
+
+    </div>
+    <div class="col-left">
+        <div class="card">
+            <h2>Bài 4</h2>
+            <div class="grid-container">
+                <button class="col1" onclick="myWindown.openWindown()">Mở trang thông tin</button>
+                <button class="col2" onclick="myWindown.print()">In thông tin</button>
+                <button class="col3" onclick="myWindown.autoMove()">Di Chuyển cửa sổ thông tin 1 tí</button>
+                <button class="col4" onclick="myWindown.moveTo()">Di chuyển tới điểm</button>
+                <button class="col5" onclick="myWindown.closeWindown()">Đóng cửa sổ</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <div class="myfooter">
-            <p>Họ và tên : Tô Xuân Cường </p>
-            <p>Email: cuongtx@natajsc.com.vn </p>       
-        </div>
-    </footer>
-        
-    
 
-    
+        <p>Họ và tên : Tô Xuân Cường </p>
+        <p>Email: cuongtx@natajsc.com.vn </p>
+    </footer>
+
 </body>
 
 </html>
