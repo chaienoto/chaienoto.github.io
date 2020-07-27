@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <script src="./js/myJS.js"></script>
@@ -38,14 +37,16 @@
                         </div>
                         <div class="col-sm">
                             <form id="myForm">
-                                a: <input type="number" id="a"><br><br> b: <input type="number" id="b"> <br><br> c:
-                                <input type="number" id="c"><br><br>
+                                a: <input type="number" id="a" onkeyup="checkformNotVaild()"><br><br> 
+                                b: <input type="number" id="b" onkeyup="checkformNotVaild()"> <br><br> 
+                                c: <input type="number" id="c" onkeyup="checkformNotVaild()"><br><br>
                             </form>
                             <button type="button" id = "startExample1Btn" onclick="startExample1()" class="btn btn-primary" disabled>Giải PT</button>
                             <button type="button" id = "ramdonBtn" onclick="randomInput()" class="btn btn-warning">Cho số</button>
                         </div>
                         <div class="col-sm">
                             <div class="asm-exam-1-result">
+                                <p id="example1Input">ax<sup>2</sup> + bx + c = 0</p>
                                 <p id="result">Kết quả: </p>
                                 <p id="x1"> </p>
                                 <p id="x2"> </p>
