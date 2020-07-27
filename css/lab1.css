@@ -1,0 +1,18 @@
+p span  {
+    width: 100px;
+    display: inline-block;
+}
+.main {
+    position: relative;
+}
+.myCard{
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 400px;
+    
+}
+h2 {
+ text-align: center;
+}
