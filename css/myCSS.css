@@ -90,19 +90,3 @@ footer {
     height: 500px;
     object-fit: cover;
 }
-
-.asm-exam-1 {
-    margin: 10px auto;
-    border: 1.5px solid rgb(216, 99, 32);
-    background-color: tomato;
-    border-radius: 20px;
-    width: 300px;
-    padding: 10px;
-}
-
-.asm-exam-1-result {
-    margin: 10px auto;
-    border: 2px solid white;
-    border-radius: 20px;
-    padding: 10px;
-}
