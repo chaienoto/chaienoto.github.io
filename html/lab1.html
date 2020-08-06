@@ -6,21 +6,22 @@
     <script src="./js/lab1.js"></script>
     <script src="./js/myJS.js"></script>
     <link rel="stylesheet" href="./css/lab1.css">
-    <link rel="stylesheet" href="./css/myCSS.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Xuan Cuong - lab 1 - bai1 + 2</title>
 </head>
+
 <body>
-    <div class="sticky-top py-1 myHeader" w3-include-html="./header.html"></div>
+    <div class="sticky-top py-1" style="background-color: black;" w3-include-html="./header.html"></div>
     <div class="container-sm">
         <div class="myCard">
             <h2>Persional Infomation</h2>
             <p><span>Name:</span><b id="name"></b></p>
             <p><span>Studen Code:</span><b id="code"></b></p>
             <p><span>Day of Birth:</span><b id="dob"></b></p>
-            <script> fillInfo()</script>
+            <script>
+                fillInfo()
+            </script>
         </div>
 
         <div class="myCard">
@@ -29,9 +30,11 @@
             <p><span>Chiều rộng:</span><b id="w"></b></p>
             <p><span>Chu vi:</span><b id="v"></b></p>
             <p><span>Diện tích:</span><b id="s"></b></p>
-            <script> calculation()</script>
+            <script>
+                calculation()
+            </script>
         </div>
-        
+
     </div>
 
 

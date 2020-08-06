@@ -4,7 +4,7 @@ exam1.isNotCompelete = true
 exam1.showInput = function() {
     console.log(this.a + " " + this.b + " " + this.c)
 }
-windown.onload = function() {
+window.onload = function() {
     startClock()
 }
 

@@ -1,22 +1,3 @@
-// example 1
-window.onload = function() {
-    includeHTML()
-    startClock()
-}
-
-// example 2
-
-
-// example 5
-
-function fover() {
-    document.getElementById("img").src = "./img/img2.jpg";
-}
-
-function fout() {
-    document.getElementById("img").src = "./img/img1.jpg";
-}
-
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     /* Loop through a collection of all HTML elements: */
