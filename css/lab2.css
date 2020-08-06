@@ -1,0 +1,36 @@
+p span  {
+    width: 100px;
+    display: inline-block;
+}
+.main {
+    position: relative;
+}
+.mycard{
+    margin : 10px auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 300px;
+    padding: 10px;
+}
+
+header { 
+    padding: 20px;
+    text-align: center;
+}
+.col-left {
+    background-color: whitesmoke;
+    float: left;
+    width: 40%;
+    box-sizing: border-box;
+    height: 600px;
+}
+.col-right{
+    background: white;
+    float: left;
+    width: 60%;
+}
+.sayHello { 
+    background:wheat; height: 120px;
+    text-align: center;
+
+}
