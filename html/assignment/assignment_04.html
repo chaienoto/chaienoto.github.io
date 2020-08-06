@@ -12,88 +12,93 @@
             Bài 4 - Trang Đăng kí
         </div>
         <div class="card-body">
-            <div class="container col-10">
+            <div class="container col-8 jumbotron">
+                <h1 class="display-4" style="padding-bottom: 20px;">Đăng kí thành viên</h1>
                 <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="validationName">Họ Và tên</label>
+                        <input type="text" class="form-control" id="validationName" required>
+                        <div class="invalid-feedback">
+                            Không được để trống
+                        </div>
+                    </div>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
-                            <label for="validationName">Họ Và tên</label>
-                            <input type="text" class="form-control" id="validationName" placeholder="input your name here" required>
-                            <div class="valid-feedback">
-                                Looks good!
+                            <label for="validationStudenCode">Mã Số Sinh viên</label>
+                            <input type="text" class="form-control" id="validationStudenCode" required>
+                            <div class="invalid-feedback">
+                                Không được để trống
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="validationStudenCode">Mã Số Sinh viên</label>
-                            <input type="text" class="form-control" id="validationStudenCode" placeholder="PSxxxxx">
+                        <div class="col-md-6 mb-3" style="padding-left: 40px">
+                            <div><label class="form-group">Giới Tính</label></div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" required>
+                                <label class="custom-control-label" for="customRadioInline1">Nam</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" required>
+                                <label class="custom-control-label" for="customRadioInline2">Nữ</label>
+                            </div>
                         </div>
+
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <div class="invalid-feedback">
+                            Không được để trống
+                        </div>
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                             else.</small>
                     </div>
-                    <fieldset class="form-group">
-                        <div class="form-row">
-                            <div class="col-md-8 mb-3">
-                                <legend class="col-sm-2 col-form-label">Giới tính</legend>
-                                <div class="col-sm-10">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline1">Nam</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline2">Nữ</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form">
-                                <label for="validationDefault04">Quốc Tịch</label>
-                                <select class="custom-select" id="validationDefault04" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option>...</option>
-                                </select>
-                            </div>
-                    </fieldset>
-                    <div class="form-group row">
-                        <div class="col-sm-2">Sở thích</div>
-                        <div class="custom-control custom-checkbox col-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="favor1">
-                            <label class="custom-control-label" for="favor1">Chơi game</label>
+
+                    <div class="form-group">
+                        <label for="validationDefault04">Quốc Tịch</label>
+                        <select class="custom-select">
+                            <option value="1">Việt Nam</option>
+                            <option value="2">Đông Lào</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <div><label class="form-group">Sở thích</label> </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Chơi game</label>
                         </div>
-                        <div class="custom-control custom-checkbox col-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="favor2">
-                            <label class="custom-control-label" for="favor2">Xem Phim</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Xem Phim</label>
                         </div>
-                        <div class="custom-control custom-checkbox col-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="favor3">
-                            <label class="custom-control-label" for="favor3">Ẩm thực</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">Đọc sách</label>
                         </div>
-                        <div class="custom-control custom-checkbox col-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="favor4">
-                            <label class="custom-control-label" for="favor4">Đọc sách</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">Du lịch</label>
                         </div>
-                        <div class="custom-control custom-checkbox col-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="favor5">
-                            <label class="custom-control-label" for="favor5">Du lịch</label>
-                        </div>
-                        <div class="custom-control custom-checkbox col-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1">Khác</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">Còn Nhiều nữa</label>
                         </div>
                     </div>
+
+
+
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Ghi Chú</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
-                </div>
-
-
             </div>
+
+
         </div>
+    </div>
     </div>
 </body>
 
