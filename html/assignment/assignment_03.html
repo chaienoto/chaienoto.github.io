@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../css/assiginment/assignment_03.css">
 </head>
 
 <body class="container">
@@ -12,11 +12,21 @@
         <div class="card-header"> Bài 3 - Trang bán hàng</div>
         <div class="card-body">
             <div class="table-responsive-sm"></div>
+            <div class="form-group">
+                <label for="validationDefault04">Chọn Mức Giá</label>
+                <select id = "sortPrice" class="custom-select" onchange="reloadByPrice()">
+                    <option value="1">0</option>
+                    <option value="2">200</option>
+                    <option value="3">400</option>
+                    <option value="4">600</option>
+                    <option value="4">800</option>
+                </select>
+            </div>
+
             <table class="table table-bordered" style="text-align: center;">
                 <thead>
                     <tr>
-                        <th scope="col"></th>
-                        <th scope="col" colspan="2">Hàng Hóa</th>
+                        <th scope="col" colspan="3">Hàng Hóa</th>
                         <th scope="col">Đơn giá</th>
                         <th scope="col">Số Lượng</th>
                         <th scope="col">Thành tiền</th>
@@ -24,43 +34,73 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td colspan="2">iphone</td>
-                        <td>700</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td colspan="2">iphone</td>
-                        <td>700</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td colspan="2">iphone</td>
-                        <td>700</td>
-                        <td></td>
+                        <th scope="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input editAmountCheckbox" type="checkbox" value="option1">
+                            </div>
+                        </th>
+                        <td colspan="2">Iphone 10</td>
+                        <td name = "itemPrice">0</td>
+                        <td>
+                            <input class="form-control centerInput" type="text" placeholder="" readonly>
+                        </td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th scope="row">1</th>
-                        <td colspan="2">iphone</td>
-                        <td>700</td>
-                        <td></td>
+                        <th scope="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input editAmountCheckbox" type="checkbox" value="option1">
+                            </div>
+                        </th>
+                        <td colspan="2">Samsung Note 20 Ultra</td>
+                        <td name = "itemPrice">200</td>
+                        <td>
+                            <input class="form-control centerInput" type="text" placeholder="" readonly>
+                        </td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th scope="row">1</th>
-                        <td colspan="2">iphone</td>
-                        <td>700</td>
+                        <th scope="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input editAmountCheckbox" type="checkbox" value="option1">
+                            </div>
+                        </th>
+                        <td colspan="2">Oppo Reno 4</td>
+                        <td name = "itemPrice">400</td>
+                        <td>
+                            <input class="form-control centerInput" type="text" placeholder="" readonly>
+                        </td>
                         <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input editAmountCheckbox" type="checkbox" value="option1">
+                            </div>
+                        </th>
+                        <td colspan="2">Xiaomi K30 Pro</td>
+                        <td name = "itemPrice">600</td>
+                        <td>
+                            <input class="form-control centerInput" type="text" placeholder="" readonly>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input editAmountCheckbox" type="checkbox" value="option1">
+                            </div>
+                        </th>
+                        <td colspan="2">One Plus 4</td>
+                        <td name = "itemPrice">800</td>
+                        <td>
+                            <input class="form-control centerInput" type="text" placeholder="" readonly>
+                        </td>
                         <td></td>
                     </tr>
                     <tr>
                         <td colspan="5">Thành Tiền</td>
-                        <td>700</td>
+                        <td id="totalPrice"></td>
                     </tr>
                 </tbody>
             </table>
