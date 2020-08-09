@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/lab7.js"></script>
+    <script src="../js/replaceHTML.js"></script>
+    <link rel="stylesheet" href="../css/lab7.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Lab7 JS Cơ Bản TÔ XUÂN CƯỜNG</title>
+</head>
+
+<body ng-app="lab7">
+    <div class="sticky-top py-1" style="background-color: black;" w3-include-html="./header.html"></div>
+    <div class="container">
+        <div class="container-sm">
+            <div class="card" ng-controller="example1">
+                <div class="card-header">Lab7 - Bài 1</div>
+                <div class="card-body">
+                    <div class="card" style="width: 18rem; margin: 0px auto;">
+                        <img src="{{image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Thông tin sinh viên</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Họ Tên: {{name}}</li>
+                                <li class="list-group-item">Ngày Sinh: {{dob}}</li>
+                                <li class="list-group-item">Mã Sinh Viên: {{stuCode}}</li>
+                                <li class="list-group-item">Giới tính: {{gender}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Lab7 - bài 2 Tính chu vi hình chữ nhật</div>
+                <div class="card-body" ng-controller="example2">
+                    <form class="container col-8 jumbotron">
+                        <div class="form-group">
+                            <label>Chiều Dài</label>
+                            <input type="number" class="form-control" ng-model="width">
+                        </div>
+                        <div class="form-group">
+                            <label>Chiều Rộng</label>
+                            <input type="number" class="form-control" ng-model="height">
+                        </div>
+                        <div class="form-group">
+                            <label>Chu Vi Hình Chữ nhật (Tự động tính)</label>
+                            <p>{{perimeter}}</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Diện Tích Hình Chữ Nhật(Tự động tính)</label>
+                            <p>{{acreage}}</p>
+                        </div>
+                        <button class="btn btn-primary mb-2" ng-click="startCalExam2()">Tính Toán</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    Bài 3 - Tạo và kiểm lỗi form với AngularJS
+                </div>
+                <div class="card-body" ng-controller="example3">
+                    <div class="container col-8 jumbotron">
+                        <h1 class="display-4" style="padding-bottom: 20px;">Phiếu Order </h1>
+                        <form name="myForm">
+                            <div class="form-group">
+                                <label>Tên Mặt hàng</label>
+                                <input name="nameInput" type="text" class="form-control"  minlength="3" maxlength="30" ng-model="nameInput" required>
+                                <small ng-if="myForm.nameInput.$invalid" class="form-feedback">Độ dài không phù hợp (3-30 ký tự)</small>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label>Số lượng</label>
+                                    <input name="amount" type="number" class="form-control" required min="1" ng-model="amount">
+                                    <small ng-if="myForm.amount.$invalid || amount>100" class="form-feedback">Số lượng 1 -> 100</small>
+                                </div>
+                                <div class="col-md-6 mb-3" style="padding-left: 40px">
+                                    <div><label class="form-group">Kích thước</label></div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="condition1" name="condition" class="custom-control-input" ng-model="condition" value="0" required>
+                                        <label class="custom-control-label" for="condition1">To</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="condition2" name="condition" class="custom-control-input" ng-model="condition" value="1" required>
+                                        <label class="custom-control-label" for="condition2">Nhỏ</label>
+                                    </div>
+                                    <div>
+                                        <small ng-if="!condition" class="form-feedback">Hàng to hay nhỏ để còn biết đường?</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label>Nơi sản xuất</label>
+                                <select name="madeIn" class="custom-select" ng-model="madeIn" required>
+                                    <option value="1">Việt Nam</option>
+                                    <option value="2">Nhật Bản</option>
+                                    <option value="3">Hàn Quốc</option>
+                                    <option value="4">Singapore</option>
+                                  </select>
+                                <small ng-if="!madeIn || madeIn == 0" class="form-feedback">Chọn xuất xứ nguồn hàng</small>
+                            </div>
+                            <div class="form-group">
+                                <div><label class="form-group">Màu sắc</label> </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input inlineCheckbox" type="checkbox" value="option1" ng-model="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Xanh</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input inlineCheckbox" type="checkbox" value="option2" ng-model="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Đở</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input inlineCheckbox" type="checkbox" value="option3" ng-model="option3">
+                                    <label class="form-check-label" for="inlineCheckbox3">Tím</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input inlineCheckbox" type="checkbox" value="option4" ng-model="option4">
+                                    <label class="form-check-label" for="inlineCheckbox3">Vàng</label>
+                                </div>
+                                <small ng-if="!option1 && !option2 && !option3 && !option4" class="form-feedback">Muốn những màu nào thì chọn đi chứ</small>
+                            </div>
+                        </form>
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <button class="btn btn-primary">Đặt Hàng</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
