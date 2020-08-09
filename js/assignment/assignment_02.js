@@ -4,8 +4,8 @@ var currentIndex = 0
 var carouselIndicator = document.getElementsByClassName("carouselIndicator");
 var imgList = []
 for (let index = 0; index <= 5; index++) {
-    imgList.push("img/wallpaper0" + index + ".jpg ")
-    console.log(imgList[index]);
+    imgList.push("../../img/wallpaper0" + index + ".jpg ")
+        // console.log(imgList[index]);
 }
 setInterval(function() { nextImg() }, 3000);
 

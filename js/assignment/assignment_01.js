@@ -10,6 +10,7 @@ window.onload = function() {
 
 function startClock() {
     exam1.clock = setInterval("clockShow()", 1000)
+    console.log("startClock");
 }
 
 function clockShow() {
