@@ -10,27 +10,24 @@
 </head>
 
 <body>
-    <div class="sticky-top py-1" style="background-color: black;" w3-include-html="./html/header.html"></div>
-    <div class="container-sm" style="margin: 2px auto; height: 100%;">
-        <iframe class="myIframe" onLoad="calcHeight(this)" src="./html/assignment/assignment_01.html" frameborder="0"></iframe>
-        <iframe class="myIframe" onLoad="calcHeight(this)" src="./html/assignment/assignment_02.html" frameborder="0"></iframe>
-        <iframe class="myIframe" onLoad="calcHeight(this)" src="./html/assignment/assignment_03.html" frameborder="0"></iframe>
-        <iframe class="myIframe" onLoad="calcHeight(this)" src="./html/assignment/assignment_04.html" frameborder="0"></iframe>
-
-        <!-- <div w3-include-html="./html/assignment/assignment_01.html" style=";"></div> -->
-        <!-- <div w3-include-html="./html/assignment/assignment_02.html" style="margin-bottom: 5px;"></div> -->
-        <!-- <div w3-include-html="./html/assignment/assignment_03.html" style="margin-bottom: 5px;"></div> -->
-        <!-- <div onclick="" w3-include-html="./html/assignment/assignment_04.html" style="margin-bottom: 5px;"></div> -->
+    <div class="sticky-top py-1" style="background-color: black;">
+        <iframe class="myIframe " onLoad="calcHeight(this) " src="./html/header.html" frameborder="0 "></iframe>
     </div>
-    <div w3-include-html="./html/footer.html"></div>
+    <div class="container-sm " style="margin: 2px auto; height: 100%; ">
+        <iframe class="myIframe " onLoad="calcHeight(this) " src="./html/assignment/assignment_01.html " frameborder="0 "></iframe>
+        <iframe class="myIframe " onLoad="calcHeight(this) " src="./html/assignment/assignment_02.html " frameborder="0 "></iframe>
+        <iframe class="myIframe " onLoad="calcHeight(this) " src="./html/assignment/assignment_03.html " frameborder="0 "></iframe>
+        <iframe class="myIframe " onLoad="calcHeight(this) " src="./html/assignment/assignment_04.html " frameborder="0 "></iframe>
 
-    <script type="text/javascript">
+        <!-- <div w3-include-html="./html/assignment/assignment_01.html " style="; "></div> -->
+        <!-- <div w3-include-html="./html/assignment/assignment_02.html " style="margin-bottom: 5px; "></div> -->
+        <!-- <div w3-include-html="./html/assignment/assignment_03.html " style="margin-bottom: 5px; "></div> -->
+        <!-- <div onclick=" " w3-include-html="./html/assignment/assignment_04.html " style="margin-bottom: 5px; "></div> -->
+    </div>
+    <div w3-include-html="./html/footer.html "></div>
+
+    <script type="text/javascript ">
         includeHTML()
-
-        function calcHeight(iframeElement) {
-            var the_height = iframeElement.contentWindow.document.body.scrollHeight;
-            iframeElement.height = the_height;
-        }
     </script>
 </body>
 
