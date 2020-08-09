@@ -10,10 +10,8 @@
 </head>
 
 <body>
-    <div class="sticky-top py-1" style="background-color: black;">
-        <iframe class="myIframe " onLoad="calcHeight(this) " src="./html/header.html" frameborder="0 "></iframe>
-    </div>
-    <div class="container-sm " style="margin: 2px auto; height: 100%; ">
+    <div class="sticky-top py-1" style="background-color: black;" w3-include-html="./html/header.html"></div>
+    <div class="container-sm " style="margin: 5px auto; height: 100%; ">
         <div class="card">
             <div class="card-header">
                 <p style="text-align: center;">Assignment 1 + 2 Javascript Cơ bản - Thầy Nguyễn Văn Long</p>
@@ -27,10 +25,6 @@
         </div>
     </div>
     <div w3-include-html="./html/footer.html "></div>
-
-    <script type="text/javascript ">
-        includeHTML()
-    </script>
 </body>
 
 </html>
