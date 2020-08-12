@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/assignment_03.css">
+    <script src="../js/assignment_03.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <div class="card">
+        <div class="card-header"> Bài 3 - Trang bán hàng</div>
+        <div class="card-body">
+            <div class="table-responsive-sm"></div>
+            <div class="form-group">
+                <label for="validationDefault04">Chọn Mức Giá</label>
+                <select id="sortPrice" class="custom-select" onchange="reloadByPrice()">
+                    <option>Chọn giá tiền</option>
+                    <option value="0">0</option>
+                    <option value="200">200</option>
+                    <option value="400">400</option>
+                    <option value="600">600</option>
+                    <option value="800">800</option>
+                </select>
+            </div>
+
+            <table class="table table-bordered" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="3">Hàng Hóa</th>
+                        <th scope="col">Đơn giá</th>
+                        <th scope="col">Số Lượng</th>
+                        <th scope="col">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- checkbox -->
+                        <th style="vertical-align: middle">
+                            <input name="editAmountCheckbox" type="checkbox" value="" onclick="enableEdit(this.value)">
+                        </th>
+                        <!-- item name -->
+                        <td colspan="2" style="vertical-align: middle;">Xiaomi K30</td>
+                        <!-- itemPrice -->
+                        <td name="itemPrice" style="vertical-align: middle;">100</td>
+                        <!-- item quantity -->
+                        <td><input name="itemAmount" class="form-control centerInput" type="number" oninput="updateTotalPriceForItem()"></td>
+                        <!-- item total price -->
+                        <td name="itemOutPrice" style="vertical-align: middle;"></td>
+                    </tr>
+                    <tr>
+                        <!-- checkbox -->
+                        <th style="vertical-align: middle">
+                            <input name="editAmountCheckbox" type="checkbox" onclick="enableEdit(this.value)">
+                        </th>
+                        <!-- item name -->
+                        <td colspan="2" style="vertical-align: middle;">Huawei P30 Pro 5G</td>
+                        <!-- itemPrice -->
+                        <td name="itemPrice" style="vertical-align: middle;">200</td>
+                        <!-- item quantity -->
+                        <td><input name="itemAmount" class="form-control centerInput" type="number" oninput="updateTotalPriceForItem()"></td>
+                        <!-- item total price -->
+                        <td name="itemOutPrice" style="vertical-align: middle;"></td>
+                    </tr>
+                    <tr>
+                        <!-- checkbox -->
+                        <th style="vertical-align: middle">
+                            <input name="editAmountCheckbox" type="checkbox" onclick="enableEdit(this.value)">
+                        </th>
+                        <!-- item name -->
+                        <td colspan="2" style="vertical-align: middle;">Oppo Reno 4</td>
+                        <!-- itemPrice -->
+                        <td name="itemPrice" style="vertical-align: middle;">400</td>
+                        <!-- item quantity -->
+                        <td><input name="itemAmount" class="form-control centerInput" type="number" oninput="updateTotalPriceForItem()"></td>
+                        <!-- item total price -->
+                        <td name="itemOutPrice" style="vertical-align: middle;"></td>
+                    </tr>
+                    <tr>
+                        <!-- checkbox -->
+                        <th style="vertical-align: middle">
+                            <input name="editAmountCheckbox" type="checkbox" onclick="enableEdit(this.value)">
+                        </th>
+                        <!-- item name -->
+                        <td colspan="2" style="vertical-align: middle;">Samsung S20 Ultra</td>
+                        <!-- itemPrice -->
+                        <td name="itemPrice" style="vertical-align: middle;">600</td>
+                        <!-- item quantity -->
+                        <td><input name="itemAmount" class="form-control centerInput" type="number" oninput="updateTotalPriceForItem()"></td>
+                        <!-- item total price -->
+                        <td name="itemOutPrice" style="vertical-align: middle;"></td>
+                    </tr>
+                    <tr>
+                        <!-- checkbox -->
+                        <th style="vertical-align: middle">
+                            <input name="editAmountCheckbox" type="checkbox" onclick="enableEdit(this.value)">
+                        </th>
+                        <!-- item name -->
+                        <td colspan="2" style="vertical-align: middle;">Iphone 12</td>
+                        <!-- itemPrice -->
+                        <td name="itemPrice" style="vertical-align: middle;">800</td>
+                        <!-- item quantity -->
+                        <td><input name="itemAmount" class="form-control centerInput" type="number" oninput="updateTotalPriceForItem()"></td>
+                        <!-- item total price -->
+                        <td name="itemOutPrice" style="vertical-align: middle;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Thành Tiền</td>
+                        <td id="totalPrice"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

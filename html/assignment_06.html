@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/assignment_06.css">
+    <script src="../js/assignment_06.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Tô Xuân Cường PS07744 Assignment Lab 5</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header alert-primary">
+                Bài 6 - Câu hỏi tổng hợp
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header alert-secondary">
+                        Câu 1. Javascript giúp bạn làm gì?
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            JavaScript được tạo ra với mục đích xử lý các tác vụ phía Client như
+                        </p>
+                        <ul>
+                            <li>Tạo menu xổ xuống. Các item menu khi đưa chuột vào sẽ xổ xuống các mục con của nó.</li>
+                            <li>Thay đổi nội dung trang web. Ví dụ: hiện kết quả khen/chê tùy user trả lời câu hỏi đúng dau, hiện lời chào tùy thời gian buổi sáng hay chiều…</li>
+                            <li>Thêm các thành phần động vào trang web như slide show, carousel.</li>
+                            <li>Tạo các hiệu ứng cho hình ảnh, text…trong trang. Ví dụ các hiệu ứng ẩn hiện hình, đổi hình khi đưa chuột vào.</li>
+                            <li>Kiểm tra tình hợp lệ cửa dữ liệu người dùng (trong form).</li>
+                            <li>JavaScript có thể dùng viết game</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header alert-success">
+                        Câu 2. Lệnh setTimeout giúp bạn làm gì?
+                    </div>
+                    <div class="card-body">
+                        Hàm setTimeout() thường được sử dụng nếumuốn hàm của mình thực thi bao nhiêu mili giây kể từ khi gọi method setTimeout()
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header alert-danger">
+                        Câu 3. Viết lệnh cần thiết để đổi màu chữ thành màu đỏ cho tất cả các tag p trong trang?
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                <div>
+                                    <span style="color: red;"> Viết trong Css</span> <br>.p { color: red; }
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span style="color: red;">Viết trong tag script</span>
+                                    <div>
+                                        &ltscript&gt
+                                        <p>&nbsp&nbsp&nbsp&nbsp var p = document.getElementsByTagName("p") <br> &nbsp&nbsp&nbsp&nbsp for (let index = 0; index
+                                            <=p.length -1; index++) { <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp x[index].style.color = "red" <br>&nbsp&nbsp&nbsp&nbsp } <br> &lt/script&gt
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header alert-warning">
+                        Câu 4. Lệnh để hiện chữ Bé giỏi quá vào tag có id là kq thì viết thế nào?
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            &ltscript&gt <br> &nbsp&nbsp&nbsp&nbsp document.getElementById("kq").innerHTML = "Bé giỏi quá" <br> &lt/script&gt
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header alert-info">
+                        Câu 5. Thư viện AngularJS giúp gì cho bạn , ngoài AngularJS còn thư viện nào khác không?
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>AngularJS cho phép tạo ra các ứng dụng một cách đơn giản với mã được tổ chức khoa học, rõ ràng.</li>
+                            <li>AngularJS sử dụng data bind – liên kết dữ liệu với các thẻ HTML nên làm giảm thiểu mã lệnh đọc ghi dữ liệu.</li>
+                            <li>AngularJS có thể chạy trên hầu hết các trình duyệt điện thoại thông minh.</li>
+                            <li>Các thuộc tính tích hợp (các chỉ thị) làm cho dữ liệu trong tag HTML trở nên “động”.</li>
+                            <li>Hỗ trợ ứng dụng đơn trang.</li>
+                            <li>Hỗ trợ hai chiều ràng buộc dữ liệu.</li>
+                            <li>Với AngularJS, lập trình viên sẽ viết ít code hơn, với nhiều chức năng hơn.</li>
+                        </ul>
+                        <p>Một Số Thư viện JS</p>
+                        <img src="../img/angularjs.png" alt="...">
+                        <img src="../img/backbonejs.png" alt="...">
+                        <img src="../img/bootstrapjs.png" alt="..."> <br>
+                        <img src="../img/reactjs.png" width="270" height="270" alt="...">
+                        <img src="../img/nodejs.png" width="270" height="270" alt="...">
+                        <img src="../img/emberjs.png" width="270" height="270" alt="...">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

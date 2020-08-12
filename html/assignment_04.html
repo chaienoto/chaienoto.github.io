@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/assignment_04.css">
+    <script src="../js/assignment_04.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <div class="card  ">
+        <div class="card-header">
+            Bài 4 - Trang Đăng kí
+        </div>
+        <div class="card-body">
+            <div class="container col-8 jumbotron">
+                <h1 class="display-4" style="padding-bottom: 20px;">Đăng kí thành viên</h1>
+                <form>
+                    <div class="form-group">
+                        <label>Họ Và tên</label>
+                        <input type="text" class="form-control" id="validationName">
+                        <div id="validationName-feedback" class="invalid-feedback"> Không được để trống </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label>Mã Số Sinh viên</label>
+                            <input type="text" class="form-control" id="validationStudenCode">
+                            <div id="validationStudenCode-feedback" class="invalid-feedback">Mã Sinh Viên Không Hợp Lệ</div>
+                        </div>
+                        <div class="col-md-6 mb-3" style="padding-left: 40px">
+                            <div><label class="form-group">Giới Tính</label></div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="genderRadio1" name="genderRadio" class="custom-control-input" required="">
+                                <label class="custom-control-label" for="genderRadio1">Nam</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="genderRadio2" name="genderRadio" class="custom-control-input" required="">
+                                <label class="custom-control-label" for="genderRadio2">Nữ</label>
+                            </div>
+                            <div id="genderRadio-feedback" class="invalid-feedback"> Vui Lòng chọn giới tính </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" id="emailValidation">
+                        <div id="emailValidation-feedback" class="invalid-feedback"> Email ko hợp lệ </div>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="validationDefault04">Quốc Tịch</label>
+                        <select class="custom-select">
+                            <option value="1">Việt Nam</option>
+                            <option value="2">Nhật Bản</option>
+                            <option value="3">Hàn Quốc</option>
+                            <option value="4">Singapore</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <div><label class="form-group">Sở thích</label> </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input inlineCheckbox" type="checkbox" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Chơi game</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input inlineCheckbox" type="checkbox" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Xem Phim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input inlineCheckbox" type="checkbox" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">Đọc sách</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input inlineCheckbox" type="checkbox" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">Còn Nhiều nữa</label>
+                        </div>
+                        <div id="inlineCheckbox-feedback" class="invalid-feedback"> Sở thích của bạn là gì nhỉ? </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Ghi Chú</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </form>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="validationForm()">Đăng kí</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
